@@ -38,7 +38,7 @@ class MagazineLuizaAPI:
                 return None
             except Exception as e:
                 if attempt < max_retries - 1:
-                    logging.warning(f"Error on attempt {attempt + 1}, retrying...")
+                    # logging.warning(f"Error on attempt {attempt + 1}, retrying...")
                     time.sleep(random.uniform(3, 7))
                     continue
                 logging.error(f"Error searching products: {e}")
@@ -63,7 +63,7 @@ class MagazineLuizaAPI:
                 return None
             except Exception as e:
                 if attempt < max_retries - 1:
-                    logging.warning(f"Error on attempt {attempt + 1}, retrying...")
+                    # logging.warning(f"Error on attempt {attempt + 1}, retrying...")
                     time.sleep(random.uniform(3, 7))
                     continue
                 logging.error(f"Error getting product details: {e}")
@@ -82,7 +82,7 @@ class MagazineLuizaAPI:
                 return response.json()
             except Exception as e:
                 if attempt < max_retries - 1:
-                    logging.warning(f"Error on attempt {attempt + 1}, retrying...")
+                    # logging.warning(f"Error on attempt {attempt + 1}, retrying...")
                     time.sleep(random.uniform(3, 7))
                     continue
                 logging.error(f"Error getting shipping: {e}")
