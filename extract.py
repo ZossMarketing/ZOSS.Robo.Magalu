@@ -18,7 +18,7 @@ def process_request(cep_item, ean_item, attempt=1):
     ean = ean_item["EAN"]
     sku_on = ean_item["SKU_ON"]
 
-    logging.info(f"[Tentativa {attempt}] Processando CEP: {cep} ({city}) - EAN: {ean}")
+    # logging.info(f"[Tentativa {attempt}] Processando CEP: {cep} ({city}) - EAN: {ean}")
 
     try:
         scraper = MagazineLuizaScraper(cep, ean, city, sku_on)

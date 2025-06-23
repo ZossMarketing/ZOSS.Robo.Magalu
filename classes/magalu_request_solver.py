@@ -140,8 +140,8 @@ class MagazineLuizaScraper:
                 "https": "http://brd-customer-hl_1c890fdd-zone-movida_mensal-country-br:i0jhk3a1o8cv@brd.superproxy.io:33335",
             }
 
-            url = scraper.get(f"https://www.magazineluiza.com.br/busca/{self.search_term}/")
-            logging.info(url.url)
+            scraper.get(f"https://www.magazineluiza.com.br/busca/{self.search_term}/")
+            # logging.info(url.url)
             time.sleep(random.uniform(3, 7))
             cookies = {k: v for k, v in scraper.cookies.get_dict().items() if "__uz" in k}
             # logging.info(f"Shield cookies capturados: {cookies}")
@@ -603,6 +603,6 @@ class MagazineLuizaScraper:
             self.results.append(unavailability)
             self.save_result(unavailability)
             self.processed_count += 1
-            logging.warning(f"No products found for EAN: {self.search_term}")
+            # logging.warning(f"No products found for EAN: {self.search_term}")
 
-        logging.info(f"{self.processed_count} records processed")
+        # logging.info(f"{self.processed_count} records processed")
