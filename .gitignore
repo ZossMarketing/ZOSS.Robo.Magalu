@@ -1,0 +1,28 @@
+# Ignore Jupyter Notebook checkpoints
+.ipynb_checkpoints/
+
+# VSCode
+.devcontainer/
+.vscode/
+
+# Development
+data/
+.zshrc
+Dockerfile-dev
+docker-compose-dev.yml
+proxies.txt
+
+# Environments
+.env
+.venv
+env/
+venv/
+ENV/
+
+# Python
+*.pyc
+__pycache__/
+.pytest_cache/
+.cache/
+.pytest_cache/
+.python-version

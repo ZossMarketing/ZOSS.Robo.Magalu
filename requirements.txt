@@ -1,0 +1,8 @@
+openpyxl
+pandas
+mysql-connector-python
+google-api-python-client
+google-auth-httplib2
+google-auth-oauthlib
+unidecode
+cloudscraper
