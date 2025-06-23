@@ -28,6 +28,7 @@ class MagazineLuizaAPI:
                     headers=self.headers_busca,
                     cookies=self.cookies_busca,
                     proxies=self.proxies,
+                    verify=False,
                     timeout=15,
                 )
                 next_data = re.search(r'<script id="__NEXT_DATA__" type="application/json">(.+?)</script>', response.text)
@@ -54,6 +55,7 @@ class MagazineLuizaAPI:
                     url_produto,
                     headers=headers,
                     proxies=self.proxies,
+                    verify=False,
                     timeout=15,
                 )
                 next_data = re.search(r'<script id="__NEXT_DATA__" type="application/json">(.+?)</script>', response.text)
@@ -77,6 +79,7 @@ class MagazineLuizaAPI:
                     headers=self.headers_frete,
                     json=payload,
                     proxies=self.proxies,
+                    verify=False,
                     timeout=15,
                 )
                 return response.json()
